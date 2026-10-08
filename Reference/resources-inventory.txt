@@ -1,0 +1,49 @@
+PracticalExamResources/Animations/Ch02_nonPBR@Booty Hip Hop Dance.fbx
+PracticalExamResources/Animations/Ch02_nonPBR@Chicken Dance.fbx
+PracticalExamResources/Animations/Ch02_nonPBR@Happy Idle.fbx
+PracticalExamResources/Animations/Ch02_nonPBR@Idle.fbx
+PracticalExamResources/Animations/Ch02_nonPBR@Twist Dance.fbx
+PracticalExamResources/Character Models/Ch02_nonPBR.fbx
+PracticalExamResources/Character Models/Ch49_nonPBR.fbx
+PracticalExamResources/Sounds/BGM/Chunky_Monkey.wav
+PracticalExamResources/Sounds/BGM/JumpyGame.wav
+PracticalExamResources/Sounds/BGM/Tiny_Blocks.wav
+PracticalExamResources/Sounds/SFX/Bounce_Jump 3.wav
+PracticalExamResources/Sounds/SFX/Bounce_Jump 4.wav
+PracticalExamResources/Sounds/SFX/Buff_Power Up 1.wav
+PracticalExamResources/Sounds/SFX/Coin Pickup 4.wav
+PracticalExamResources/Sounds/SFX/Coin Pickup 5.wav
+PracticalExamResources/Sounds/SFX/Coin Pickup 6.wav
+PracticalExamResources/Sounds/SFX/Coin Pickup 7.wav
+PracticalExamResources/Sounds/SFX/Coins 2.wav
+PracticalExamResources/Sounds/SFX/Coins 3.wav
+PracticalExamResources/Sounds/SFX/Coins.wav
+PracticalExamResources/Sounds/SFX/Collect star 1.wav
+PracticalExamResources/Sounds/SFX/Collect star 2.wav
+PracticalExamResources/Sounds/SFX/Collect star 3.wav
+PracticalExamResources/Sounds/SFX/Collect star 4.wav
+PracticalExamResources/Sounds/SFX/Collect star 5.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 1.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 10.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 2.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 3.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 4.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 5.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 6.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 7.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 8.wav
+PracticalExamResources/Sounds/SFX/Debuff Downgrade 9.wav
+PracticalExamResources/Sounds/SFX/Game Over 2.wav
+PracticalExamResources/Sounds/SFX/Lost sound 4.wav
+PracticalExamResources/Sounds/SFX/Power up 1.wav
+PracticalExamResources/Sounds/SFX/Power up 2.wav
+PracticalExamResources/Sounds/SFX/Power up 3.wav
+PracticalExamResources/Sounds/SFX/Powerup upgrade 1.wav
+PracticalExamResources/Sounds/SFX/Powerup upgrade 2.wav
+PracticalExamResources/Sounds/SFX/Powerup upgrade 3.wav
+PracticalExamResources/Sounds/SFX/Powerup upgrade 4.wav
+PracticalExamResources/Sounds/SFX/Win sound 1.wav
+PracticalExamResources/Sounds/SFX/Win sound 2.wav
+PracticalExamResources/Sounds/SFX/Win sound 3.wav
+PracticalExamResources/Sounds/SFX/Win sound 4.wav
+PracticalExamResources/Sounds/SFX/Win sound 5.wav

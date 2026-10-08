@@ -1,0 +1,12 @@
+Unity 6000.5.8f1
+PASS: ProBuilder creates a cube mesh.
+PASS: Prefab loads with no missing scripts: Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs/FPSController.prefab
+PASS: Prefab loads with no missing scripts: Assets/Standard Assets/Characters/ThirdPersonCharacter/Prefabs/ThirdPersonController.prefab
+PASS: Empty scene saved with camera and directional light only.
+Standard Assets 2018 copied from local imported package with existing Unity 6 compatibility fixes.
+Built-in rendering; legacy Input Manager enabled for Standard Assets.
+Starter Assets Third Person required for exam Stage 2 is NOT installed.
+Prefab movement has not been Play Mode tested in this empty scene.
+PASS: Reopened after initial import and repeated setup checks successfully.
+Initial import logged Unity API Updater exceptions; no Exception, error CS, or Shader error found in the subsequent reopen log.
+Reopen log: D:/Unity/Tools/Setup/practical-reopen.log

@@ -1,0 +1,98 @@
+สรุปโจทย์ Practical Examination 1/2569
+672110105 panyawat hainak
+อ่านจาก 169-PracticalExam.pdf (9 หน้า), ตรวจรายการไฟล์ใน PracticalExamResources.zip
+ช่วงสอบที่ระบุ: 8–13 ตุลาคม 2026 | 12 เกณฑ์ | 75 คะแนน | 15% ของรายวิชา
+
+สถานะโปรเจกต์
+D:/Unity/PracticalExam-672110105
+Unity 6000.5.8f1, Built-in Render Pipeline
+ติดตั้ง ProBuilder 6.1.2 และ Standard Assets 2018 จากชุดที่นำเข้าไว้ในโปรเจกต์เดิม
+Standard Assets มีการแก้ความเข้ากันได้กับ Unity 6 อยู่แล้ว เช่น GUIText และ GetInstanceID
+ผลการตรวจติดตั้งดู setup-verification.txt; การตรวจ Prefab ไม่เท่ากับทดสอบเดินในฉาก
+ฉากหลัก Assets/Scenes/Empty.unity มีเพียงกล้องกับแสง ยังไม่มีเกมหรือด่าน
+Standard Assets 2018 ไม่ใช่ Starter Assets Third Person ที่โจทย์ Stage 2 ระบุ ต้องเพิ่มชุดที่ถูกต้องก่อนทำด่าน 2 และตรวจความเข้ากันได้ของ render pipeline/Input System/Cinemachine ตามรุ่นที่เลือก
+ยังไม่ได้สร้าง repository ออนไลน์ commit หรือ push
+
+ทรัพยากรใน ZIP และแนวทางใช้
+แตกไว้ใน Reference/PracticalExamResources เพื่อยังไม่ import ทุกไฟล์เข้า Unity
+1. Character Models: Ch02_nonPBR.fbx, Ch49_nonPBR.fbx รวม 2 โมเดล
+   แนะนำเริ่มจาก Ch02 เพราะไฟล์แอนิเมชันที่ให้ขึ้นต้นด้วย Ch02 และไฟล์เล็กกว่า
+   ต้องนำเข้าเป็น Humanoid ตรวจ Avatar และวัสดุ แล้วแทนโมเดลแสดงผลของ Starter Assets
+2. Animations: Booty Hip Hop Dance, Chicken Dance, Happy Idle, Idle, Twist Dance รวม 5 คลิป
+   Idle/Happy Idle ใช้ยืนพัก; ท่าเต้นอาจใช้ฉลองชัย เป็นตัวเลือก ไม่ใช่ข้อบังคับในโจทย์
+   ZIP ไม่มีคลิปเดิน วิ่ง กระโดด จึงต้องใช้ชุดการเคลื่อนไหวของ Starter Assets หรือเตรียมให้ครบ
+3. BGM: Chunky_Monkey.wav, JumpyGame.wav, Tiny_Blocks.wav รวม 3 เพลง
+   เลือกให้แต่ละฉาก ตั้ง loop และส่งเข้า Music mixer group
+4. SFX รวม 39 ไฟล์: เสียงเหรียญ ดาว เพิ่มพลัง ลดพลัง กระโดด ชนะและแพ้
+   ตัวอย่างการจับคู่: Coin Pickup -> คะแนนบวก; Buff/Power up -> เพิ่มเวลา;
+   Debuff -> หักเวลา/คะแนน; Win sound -> ชนะ; Game Over/Lost -> แพ้
+   นี่เป็นข้อเสนอการออกแบบ ไม่ใช่ชื่อไฟล์ที่โจทย์บังคับ
+5. ไม่มีฉากสำเร็จ สคริปต์เกม หรือโมเดลไอเท็ม/สิ่งกีดขวาง ต้องสร้างหรือจัดหาเอง
+   รายการชื่อไฟล์ทั้งหมดอยู่ Reference/resources-inventory.txt
+นำเฉพาะไฟล์ที่จะใช้จาก Reference ไปไว้ Assets/ExamResources ก่อนผูกในเกม
+Reference ถูกยกเว้นใน .gitignore แต่ไฟล์ที่เกมใช้งานจริงใน Assets ต้องส่งขึ้น Git พร้อม .meta
+
+ข้อกำหนด 12 ข้อ
+Q1 (10): เชื่อมฉากและปุ่มให้ครบตามรูปหน้า 9 ใช้ UI Text บอกชื่อฉาก
+    Main Menu -> Stage Selection -> Stage 1 หรือ Stage 2
+    Main Menu -> Options แบบ Additive; ปุ่ม OK ปิด Options กลับเมนู
+    Stage Selection ปุ่ม Back -> Main Menu
+    Stage 1/2 ปุ่ม Back -> Stage Selection ตามลูกศรในภาพ
+    Stage 1/2 ส่งผลไป Win หรือ Game Over และแสดงคะแนน
+    Win/Game Over มี Back To Main Menu; Game Over มี Try Again
+    Main Menu มี Exit
+    ภาพมี Credits พร้อมชื่อ/รหัสและ Back แต่ไม่เห็นเส้นเชื่อมหรือปุ่มเข้า Credits ชัดเจน
+    ควรยืนยันทางเข้า Credits และปลายทาง Try Again; ข้อเสนอคือ Credits เข้าจากเมนู และ Try Again เริ่มด่านล่าสุด
+    ข้อความหน้า 6 กล่าวถึงกลับ Main Menu ในหัวข้อแพ้ แต่ภาพมี Game Over คั่น จึงควรยืนยันหากต้องตรงทุกเส้น
+Q2 (5): Stage 1 ใช้ Capsule Player ตามบทเรียน ไม่ใช่แทนด้วย Humanoid โดยไม่ตั้งค่าตามโจทย์
+Q3 (5): Stage 1 สร้างด้วย ProBuilder ทางแคบและกว้าง มีจุดตกแล้วแพ้ ใช้ Prefab วางไอเท็มทั่วแผนที่
+Q4 (5): ไอเท็ม 4 ชนิด: เวลา +3 วินาที, เวลา -5 วินาที, คะแนน +500, คะแนน -500
+    Stage 1 รับผลเมื่อชน/เข้า Trigger; แยกประเภทด้วย component หรือ tag ได้
+    ต้องกรอกชื่อ Prefab ที่ใช้จริงในแบบตอบ
+Q5 (10): HUD คะแนนและเวลา นับถอยหลังเริ่ม 30 วินาทีที่มุมซ้ายบน
+    ข้อความระบุเกมจบเมื่อหมดเวลา; คะแนนมากกว่า 10,000 จึงชนะ; ตกจากทางเดินแพ้
+    โจทย์ระบุแพ้เมื่อไม่ถึง 10,000 จึงเว้นกรณีเท่ากับ 10,000 ต้องสอบถามผู้สอน
+    ข้อเสนอหากยึดคำว่า “มากกว่า”: เวลาเป็น 0 แล้ว score > 10000 ชนะ นอกนั้นแพ้
+    ไม่ควรชนะทันทีที่แตะเป้าคะแนน หากยึดข้อที่บอกจบเมื่อหมดเวลา
+    ต้องมีไอเท็ม +500 อย่างน้อย 21 ชิ้นที่เก็บได้ และเผื่อชิ้นชดเชยคะแนนติดลบ
+Q6 (5): Stage 2 ใช้ตัวละคร Humanoid ของตนเองกับ Starter Assets Third Person Controller และเตรียม Interaction
+Q7 (5): Stage 2 ใช้ ProBuilder พื้นที่ไม่ต่ำกว่า 50 ตารางเมตร เช่น 10 x 5 เมตร
+    50 ตารางเมตรไม่ใช่ขนาด 50 x 50 เมตร; วางไอเท็มผ่าน Prefab ให้เพียงพอชนะ
+Q8 (10): Stage 2 ไอเท็ม 4 ชนิดเหมือน Stage 1 แต่เก็บผ่าน Interaction แทนเดินชนแล้วเก็บทันที
+    ตัวอย่างวิธีทำ: เข้าใกล้แสดง prompt กด E แล้วจึงรับผลและเก็บไอเท็ม
+    Stage 2 ใช้เงื่อนไขแพ้/ชนะและเวลาแบบ Stage 1
+Q9 (5): Options ปรับระดับเสียง BGM และ SFX แยกกันได้และมีผลจริง
+Q10 (5): มี BGM ทุกฉาก ระวังเพลงซ้อนเมื่อเปิด Options แบบ Additive
+Q11 (5): มีเสียงเมื่อรับไอเท็ม โดย Stage 2 ให้เสียงสัมพันธ์กับการ Interact ที่สำเร็จ
+Q12 (5): มีเสียงเมื่อชนสิ่งกีดขวาง/รับผลด้านลบ
+
+ลำดับลงมือที่แนะนำ
+1. สร้าง public Git repository ใหม่ เชื่อมโปรเจกต์และเตรียมส่งความคืบหน้า
+2. เพิ่ม Starter Assets ที่ถูกต้องและเลือก Ch02/Ch49 สำหรับ Stage 2
+3. สร้างฉากเมนู เลือกด่าน Options Credits Win Game Over และฉากด่านทั้งสอง
+4. ทำระบบกลาง: timer, score, game result, scene navigation; โค้ดที่เขียนเองใช้ namespace PanyawatHainak
+5. ทำ Prefab ไอเท็มสี่ชนิดให้ทดสอบผลได้ แล้วทำ Stage 1 capsule/แผนที่
+6. ทำ Stage 2 third-person/Interaction/แผนที่
+7. ทำ Audio Mixer และเสียงเชื่อม Options
+8. ทดสอบครบ: ชนะ แพ้ ตก เวลาเพิ่ม/ลด คะแนนเพิ่ม/ลด รีสตาร์ท เปลี่ยนฉาก และเสียง
+9. บันทึกวิดีโอหลักฐาน เติม Video URL และ Evidence description ครบทั้ง 12 เกณฑ์
+10. เติมชื่อ รหัส และตอนเรียนในเอกสาร พร้อมภาพ Git history
+
+เงื่อนไขส่งงานที่ PDF เน้น
+- ส่งผ่าน Git repository ใหม่ที่เป็น public ตาม URL ที่ระบุเท่านั้น
+- commit และ push อย่างน้อยวันละ 1 ครั้งตลอดช่วงสอบ; ใช้ข้อความ commit สื่อความหมาย
+- แนบ screenshot Git history ที่เห็นเวลาและรายการ commit
+- โค้ดที่พัฒนาขึ้นอยู่ใน namespace ชื่อภาษาอังกฤษของนักศึกษา
+- เขียนชื่อ/รหัสทุกหน้า และกรอกส่วนหลักฐานตามที่กำหนด
+- ทำบันทึกความคืบหน้าจริง ไม่มีการย้อนหลังวันที่ commit
+
+ประเด็นไฟล์ขนาดใหญ่
+Ch49_nonPBR.fbx ขนาด 117,142,752 bytes (ประมาณ 111.7 MiB) เกินขีดจำกัดไฟล์ GitHub ปกติ 100 MiB
+ถ้าเลือกใช้ไฟล์นี้และส่งผ่าน GitHub ต้องตั้ง Git LFS ก่อน commit ไฟล์ ไม่ใช่ซ่อนไฟล์ที่เกมต้องใช้ด้วย .gitignore
+เอกสาร GitHub: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+เลือก Ch02 ขนาดประมาณ 47.7 MiB จะช่วยลดภาระไฟล์ แต่ยังต้องตรวจสิ่งที่ใช้จริงทั้งหมด
+
+ขอบเขตการวิเคราะห์
+ตรวจข้อความทั้ง 9 หน้าและภาพผังฉาก พร้อมรายการไฟล์ ZIP
+ยังไม่ได้ดูวิดีโอตัวอย่างจากลิงก์ cmu.to ใน PDF
+ครั้งนี้เป็นการตั้งโปรเจกต์เปล่า ติดตั้งเครื่องมือ และวิเคราะห์โจทย์ ยังไม่ได้สร้างเกมข้อสอบ
