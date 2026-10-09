@@ -1,0 +1,19 @@
+ข้อ 1: ระบบเชื่อมฉาก (9 ตุลาคม 2026)
+โปรเจกต์: D:/Unity/PracticalExam-672110105
+เปิด Assets/Exam/Scenes/MainMenu.unity แล้วกด Play
+UI จะสร้างขึ้นเมื่อเริ่ม Play จึงไม่เห็นปุ่มใน Edit Mode
+Main Menu: Start -> Stage Selection; Options -> เปิด Options แบบ Additive; Credits -> เครดิต; Exit -> ปิดเกม (ใน Editor จะหยุด Play)
+Options: OK ปิดเฉพาะ Options และคง Main Menu เดิม
+Stage Selection: เลือก Stage 1 หรือ Stage 2; Back กลับ Main Menu
+Stage 1/2: ฉากสำหรับตรวจเส้นทาง ยังไม่มี gameplay; Win (test) ไป Win; Lose (test) ไป Game Over; Back ไป Stage Selection
+Game Over: Try Again กลับด่านล่าสุดและเริ่มคะแนนที่ 0; Back To Main Menu กลับเมนู
+Win: Back To Main Menu กลับเมนู
+Credits: ชื่อ 672110105 panyawat hainak; Back กลับเมนู
+ตั้ง Build Settings ให้ MainMenu เป็นฉากแรก รวม 8 ฉาก
+ข้อที่ตีความเพิ่มเติมจากภาพ: เพิ่มปุ่ม Credits ที่เมนูเพื่อให้เข้าได้ และให้ Try Again เล่นด่านล่าสุด
+คะแนนตอนนี้เป็น 0 สำหรับตรวจการส่งต่อ ยังไม่มีระบบเก็บคะแนน
+Options ยังไม่มีระบบปรับเสียง (อยู่ในข้อเสียงภายหลัง)
+ยังไม่ทำ Stage gameplay, ไอเท็ม, เวลา, เงื่อนไขชนะจริง หรือ BGM/SFX
+ผลทดสอบ: Evidence/navigation-checks.txt
+ภาพเมนู: Evidence/MainMenu.png
+ปุ่ม Exit มีคำสั่งใช้งาน แต่ชุดทดสอบไม่กดปิดตัวเองและยังไม่ได้ทดสอบโปรแกรมที่ Build

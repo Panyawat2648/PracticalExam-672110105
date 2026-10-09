@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Empty.unity
-    guid: b004690d119519a4fa4882ad0fcab55a
+    path: Assets/Exam/Scenes/MainMenu.unity
+    guid: 17f8ad4e3b1183745aca8426abbad97c
+  - enabled: 1
+    path: Assets/Exam/Scenes/StageSelection.unity
+    guid: fc617ee3addac1a46a2389cb843011fd
+  - enabled: 1
+    path: Assets/Exam/Scenes/Stage1.unity
+    guid: 33107231ab404244b94b9f67453a9c2f
+  - enabled: 1
+    path: Assets/Exam/Scenes/Stage2.unity
+    guid: 12300de4e568246449c6312427e7f9c3
+  - enabled: 1
+    path: Assets/Exam/Scenes/Options.unity
+    guid: 2e6cb305f80297a419d9bbb6f52f8c88
+  - enabled: 1
+    path: Assets/Exam/Scenes/Credits.unity
+    guid: 26097790737573d469acd31f2d71ba0e
+  - enabled: 1
+    path: Assets/Exam/Scenes/Win.unity
+    guid: 74848807690b76d4baf2b7e983bec8ae
+  - enabled: 1
+    path: Assets/Exam/Scenes/GameOver.unity
+    guid: 0bf903481512b674e8603116049c6f43
   m_configObjects: {}

@@ -1,0 +1,68 @@
+PASS: Exactly one EventSystem in MainMenu
+PASS: Eight enabled exam scenes
+PASS: MainMenu / Options enabled
+PASS: Options loads additively
+PASS: Options preserves Main Menu
+PASS: Options shares one EventSystem
+PASS: MainMenu / Options enabled
+PASS: Repeated Options does not duplicate scene
+PASS: Options / OK enabled
+PASS: OK unloads Options
+PASS: MainMenu / Credits enabled
+PASS: Exactly one EventSystem in Credits
+PASS: Credits displays student code
+PASS: Credits / Back enabled
+PASS: Exactly one EventSystem in MainMenu
+PASS: MainMenu / Start enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Back enabled
+PASS: Exactly one EventSystem in MainMenu
+PASS: MainMenu / Start enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Stage 1 - Capsule Player enabled
+PASS: Exactly one EventSystem in Stage1
+PASS: Stage1 / Back enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Stage 1 - Capsule Player enabled
+PASS: Exactly one EventSystem in Stage1
+PASS: Stage1 / Lose (test) enabled
+PASS: Exactly one EventSystem in GameOver
+PASS: GameOver / Try Again enabled
+PASS: Exactly one EventSystem in Stage1
+PASS: Stage1 / Win (test) enabled
+PASS: Exactly one EventSystem in Win
+PASS: Win / Back To Main Menu enabled
+PASS: Exactly one EventSystem in MainMenu
+PASS: MainMenu / Start enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Stage 1 - Capsule Player enabled
+PASS: Exactly one EventSystem in Stage1
+PASS: Stage1 / Lose (test) enabled
+PASS: Exactly one EventSystem in GameOver
+PASS: GameOver / Back To Main Menu enabled
+PASS: Exactly one EventSystem in MainMenu
+PASS: MainMenu / Start enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Stage 2 - Humanoid Player enabled
+PASS: Exactly one EventSystem in Stage2
+PASS: Stage2 / Back enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Stage 2 - Humanoid Player enabled
+PASS: Exactly one EventSystem in Stage2
+PASS: Stage2 / Lose (test) enabled
+PASS: Exactly one EventSystem in GameOver
+PASS: GameOver / Try Again enabled
+PASS: Exactly one EventSystem in Stage2
+PASS: Stage2 / Win (test) enabled
+PASS: Exactly one EventSystem in Win
+PASS: Win / Back To Main Menu enabled
+PASS: Exactly one EventSystem in MainMenu
+PASS: MainMenu / Start enabled
+PASS: Exactly one EventSystem in StageSelection
+PASS: StageSelection / Stage 2 - Humanoid Player enabled
+PASS: Exactly one EventSystem in Stage2
+PASS: Stage2 / Lose (test) enabled
+PASS: Exactly one EventSystem in GameOver
+PASS: GameOver / Back To Main Menu enabled
+PASS: Exactly one EventSystem in MainMenu
+PASS: Exit button available (quits Play Mode in Editor / application in build)
