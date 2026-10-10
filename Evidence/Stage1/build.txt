@@ -1,0 +1,1 @@
+Stage1: 36 ProBuilder meshes; 36 score coins, 3 time bonuses, 4 score penalties, 4 time penalties. Capsule Rigidbody, gravity, collider, input actions. Four item prefabs and one player prefab. Strict >10000 win at time expiry.

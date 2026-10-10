@@ -10,6 +10,7 @@ namespace PanyawatHainak
         public string screen;
         public static string LastStage = "Stage1";
         public static int Score;
+        public static string ResultReason = "";
         static bool optionsLoading;
         Font font;
         Transform panel;
@@ -54,6 +55,7 @@ namespace PanyawatHainak
                     Button("Back",-125,()=>Go("StageSelection"));break;
                 case "Win": case "GameOver":
                     Label("Score: "+Score,95,26,Color.white);
+                    Label(ResultReason,55,17,Color.white);
                     if(screen=="GameOver") Button("Try Again",15,()=>Stage(LastStage));
                     Button("Back To Main Menu",-100,()=>Go("MainMenu"));break;
                 case "Credits":
@@ -78,7 +80,7 @@ namespace PanyawatHainak
             }
         }
         public static void Go(string target) { SceneManager.LoadScene(target); }
-        static void Stage(string target) { LastStage=target;Score=0;Go(target); }
+        static void Stage(string target) { LastStage=target;Score=0;ResultReason="";Go(target); }
         static void OpenOptions() {
             if(optionsLoading||SceneManager.GetSceneByName("Options").isLoaded)return;
             optionsLoading=true;

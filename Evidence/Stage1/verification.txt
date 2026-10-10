@@ -1,0 +1,31 @@
+PASS: Starts with 30-second countdown
+PASS: Capsule collider and dynamic Rigidbody gravity
+PASS: 36 +500 coins provide more than target score
+PASS: Level built with actual ProBuilder meshes
+PASS: No manual Win/Lose buttons in gameplay
+PASS: Space jumps
+PASS: Capsule returns to ground at (0.00, 1.00, -2.00)
+PASS: D turns Capsule
+PASS: ScorePlus collected by collision and disabled
+PASS: Score pickup adds exactly 500
+PASS: Collected item cannot apply twice
+PASS: ScoreMinus collected by collision and disabled
+PASS: Penalty removes exactly 500
+PASS: TimePlus collected by collision and disabled
+PASS: Time bonus adds exactly 3 seconds
+PASS: TimeMinus collected by collision and disabled
+PASS: Time penalty removes exactly 5 seconds
+PASS: Restart restores score and all 47 items
+PASS: Crossed bridge to (0.00, 0.00, 20.00) without falling
+PASS: Crossed bridge to (20.00, 0.00, 20.00) without falling
+PASS: Crossed bridge to (20.00, 0.00, 0.00) without falling
+PASS: Crossed bridge to (0.00, 0.00, 0.00) without falling
+PASS: Playable full loop collects enough coins to win: 17500
+PASS: Exceeding target does not end run before timeout
+PASS: Timeout above 10000 goes to Win with final score
+PASS: Timeout below target loses
+PASS: Try Again starts fresh Stage1
+PASS: Exactly 10000 loses under documented strict greater-than rule
+PASS: Falling below level loses immediately
+PASS: Time penalty reaching zero resolves game immediately
+PASS: Back returns to Stage Selection
