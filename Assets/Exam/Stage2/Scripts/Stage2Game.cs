@@ -12,14 +12,29 @@ public class Stage2Game:MonoBehaviour {
     public bool Ended {get;private set;}
     Text timeText,scoreText,notice,prompt;float noticeUntil;
     Font font;Transform canvas;
+    Stage2Interactor interactor;Stage2Item shownItem;float nextHudUpdate;int shownTenths=-1,shownPoints=int.MinValue;
     void Awake(){Remaining=seconds;Points=0;ExamScreen.Score=0;ExamScreen.LastStage="Stage2";Time.timeScale=1;}
-    void Start(){BuildHUD();Refresh();}
+    void Start(){
+        if(!player.GetComponent<ObstacleAudio>())player.gameObject.AddComponent<ObstacleAudio>();
+        interactor=player.GetComponent<Stage2Interactor>();
+        QualitySettings.vSyncCount=0;Application.targetFrameRate=60;
+        QualitySettings.shadows=ShadowQuality.HardOnly;
+        QualitySettings.shadowResolution=ShadowResolution.Low;
+        QualitySettings.shadowCascades=0;QualitySettings.shadowDistance=30;
+        QualitySettings.antiAliasing=0;QualitySettings.pixelLightCount=1;
+        QualitySettings.globalTextureMipmapLimit=1;
+        var brain=Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
+        if(brain)brain.m_UpdateMethod=Cinemachine.CinemachineBrain.UpdateMethod.LateUpdate;
+        BuildHUD();Refresh();
+        prompt.text="Approach an item to interact";
+    }
     void Update(){
         if(Ended)return;
         if(player.transform.position.y<fallHeight){Finish(false,"Fell from the platforms");return;}
-        Advance(Time.deltaTime);Refresh();
+        Advance(Time.deltaTime);
+        if(Time.unscaledTime>=nextHudUpdate){nextHudUpdate=Time.unscaledTime+.1f;Refresh();}
         if(notice&&Time.time>noticeUntil)notice.text="";
-        if(prompt) { var item=player.GetComponent<Stage2Interactor>().Target; prompt.text=item ? "Press E  |  "+item.Description : "Approach an item to interact"; }
+        if(prompt&&interactor.Target!=shownItem) { shownItem=interactor.Target; prompt.text=shownItem ? "Press E  |  "+shownItem.Description : "Approach an item to interact"; }
     }
     public void Advance(float elapsed){
         if(Ended)return;
@@ -28,6 +43,7 @@ public class Stage2Game:MonoBehaviour {
     }
     public void Apply(ItemEffect effect){
         if(Ended)return;
+        ExamAudio.Instance?.Item(effect);
         string message="";
         switch(effect){
             case ItemEffect.ScorePlus:Points+=500;message="+500 POINTS";break;
@@ -45,8 +61,9 @@ public class Stage2Game:MonoBehaviour {
         SceneManager.LoadScene(won?"Win":"GameOver");
     }
     void Refresh(){
-        if(timeText)timeText.text="TIME  "+Remaining.ToString("0.0")+" s";
-        if(scoreText)scoreText.text="SCORE  "+Points+"   /   > 10,000";
+        int tenths=Mathf.RoundToInt(Remaining*10);
+        if(timeText&&tenths!=shownTenths){shownTenths=tenths;timeText.text="TIME  "+Remaining.ToString("0.0")+" s";}
+        if(scoreText&&Points!=shownPoints){shownPoints=Points;scoreText.text="SCORE  "+Points+"   /   > 10,000";}
         if(timeText)timeText.color=Remaining<=10?new Color(.72f,.12f,.16f):new Color(.10f,.18f,.28f);
     }
     void BuildHUD(){

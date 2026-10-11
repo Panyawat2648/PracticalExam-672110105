@@ -64,9 +64,10 @@ namespace PanyawatHainak
                     Label("Student Code: 672110105",-20,22,new Color(.10f,.18f,.28f));
                     Button("Back",-125,()=>Go("MainMenu"));break;
                 case "Options":
-                    Label("BGM and SFX controls will be added in the audio task.",65,18,new Color(.10f,.18f,.28f));
-                    Label("This page currently demonstrates additive scene loading.",15,18,new Color(.32f,.40f,.49f));
-                    Button("OK",-115,CloseOptions);break;
+                    Volume("BGM",95,ExamAudio.Instance.Music.volume,ExamAudio.Instance.SetMusic);
+                    Volume("SFX",0,ExamAudio.Instance.Effects.volume,ExamAudio.Instance.SetEffects);
+                    Button("Test SFX",-75,()=>ExamAudio.Instance.Preview());
+                    Button("OK",-145,CloseOptions);break;
             }
         }
         string Title() {
@@ -87,7 +88,7 @@ namespace PanyawatHainak
             var op=SceneManager.LoadSceneAsync("Options",LoadSceneMode.Additive);
             op.completed+=_=>optionsLoading=false;
         }
-        static void CloseOptions() { if(SceneManager.GetSceneByName("Options").isLoaded) SceneManager.UnloadSceneAsync("Options"); }
+        static void CloseOptions() { ExamAudio.Instance?.Save(); if(SceneManager.GetSceneByName("Options").isLoaded) SceneManager.UnloadSceneAsync("Options"); }
         static void Quit() {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying=false;
@@ -102,6 +103,20 @@ namespace PanyawatHainak
         void Label(string text,float y,int size,Color color) {
             var t=Rect(text,panel,new Vector2(0,y),new Vector2(680,55)).gameObject.AddComponent<Text>();
             t.font=font;t.text=text;t.fontSize=size;t.color=color;t.alignment=TextAnchor.MiddleCenter;t.raycastTarget=false;
+        }
+        void Volume(string name,float y,float initial,UnityEngine.Events.UnityAction<float> changed) {
+            var title=Rect(name+" value",panel,new Vector2(0,y+29),new Vector2(500,35)).gameObject.AddComponent<Text>();
+            title.font=font;title.fontSize=21;title.alignment=TextAnchor.MiddleCenter;title.color=new Color(.10f,.18f,.28f);title.raycastTarget=false;
+            var row=Rect(name+" Volume",panel,new Vector2(0,y-9),new Vector2(430,30));
+            row.gameObject.AddComponent<Image>().color=new Color(.76f,.82f,.88f);
+            var slider=row.gameObject.AddComponent<Slider>();slider.minValue=0;slider.maxValue=1;
+            var fill=Rect("Fill",row,Vector2.zero,Vector2.zero);fill.anchorMin=Vector2.zero;fill.anchorMax=Vector2.one;
+            fill.gameObject.AddComponent<Image>().color=new Color(.25f,.60f,.82f);
+            var handle=Rect("Handle",row,Vector2.zero,new Vector2(20,8));
+            handle.gameObject.AddComponent<Image>().color=new Color(.12f,.35f,.52f);
+            slider.fillRect=fill;slider.handleRect=handle;slider.targetGraphic=handle.GetComponent<Image>();
+            slider.SetValueWithoutNotify(initial);title.text=name+"  "+Mathf.RoundToInt(initial*100)+"%";
+            slider.onValueChanged.AddListener(v=>{changed(v);title.text=name+"  "+Mathf.RoundToInt(v*100)+"%";});
         }
         void Button(string text,float y,UnityEngine.Events.UnityAction action) {
             var r=Rect(text,panel,new Vector2(0,y),new Vector2(430,48));

@@ -7,3 +7,4 @@ Boundary cases use explicit time advancement/teleports: timeout, exactly 10,000,
 See verification.txt and Stage2-start/route/win.png.
 Older Standard Assets scripts still produce Unity 6 obsolete-API warnings. The first fresh import also logged an API updater exception; later compilation and Play Mode completed successfully.
 The local editor startup search index was disabled to work around a UnityEditor.Search startup exception in the fresh worktree; this does not affect game code.
+Performance follow-up: cached scene items instead of searching every frame; HUD timer redraw limited to 10 Hz with score/prompt updated only on changes; reduced shadow/texture/AA load, 60 FPS target, camera LateUpdate. Stage2 checks rerun after changes. These are functional checks, not a measured interactive FPS benchmark.

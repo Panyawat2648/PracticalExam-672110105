@@ -1,0 +1,31 @@
+ระบบเสียงข้อ 9–12 (โปรเจกต์ PracticalExam-672110105-v3)
+
+วิธีลอง
+1. เปิด Assets/Exam/Scenes/MainMenu.unity แล้วกด Play
+2. ฟังเพลงเมนู แล้วกด Options: เพลงต้องเล่นต่อ ไม่ซ้อนและไม่เริ่มใหม่
+3. ลาก BGM เพื่อปรับเพลง และ SFX เพื่อปรับเอฟเฟกต์แยกกัน; 0% คือปิดเสียงช่องนั้น
+4. กด Test SFX เพื่อฟังระดับเอฟเฟกต์ แล้วกด OK เพื่อบันทึกค่า
+5. เข้า Stage 1: เดินชนไอเท็มแต่ละชนิดเพื่อรับผลพร้อมเสียง
+6. เข้า Stage 2: เดินเข้าใกล้ยังไม่มีเสียงเก็บ ต้องกด E เก็บสำเร็จก่อน
+7. เดินชนด้านข้างกำแพงใน Stage 2 จะมีเสียงกระแทก โดยเว้นช่วงไม่ให้ดังทุกเฟรม
+8. ชนะหรือแพ้จะมีเสียงผลลัพธ์; เพลงยังเล่นในหน้าผลลัพธ์และ Credits
+
+เพลงจาก PracticalExamResources
+เมนู/เลือกด่าน/Options/Credits/Win/GameOver: Tiny_Blocks.wav
+Stage 1: JumpyGame.wav
+Stage 2: Chunky_Monkey.wav
+
+เสียงเอฟเฟกต์
++500: Coin Pickup 4.wav
++3 วินาที: Power up 1.wav
+-500: Debuff Downgrade 1.wav
+-5 วินาที: Debuff Downgrade 3.wav
+ชนด้านข้างสิ่งกีดขวาง: Bounce_Jump 3.wav
+ชนะ: Win sound 1.wav
+แพ้: Game Over 2.wav
+
+ใช้ ExamAudio ที่คงอยู่ข้ามฉาก: AudioSource BGM แบบ loop และ AudioSource SFX แบบ PlayOneShot
+ปรับระดับเสียงแยกผ่าน AudioSource.volume และเก็บค่าด้วย PlayerPrefs
+เพลงยาว import แบบ Streaming; เสียงสั้นแบบ Decompress On Load
+เสียงไอเท็มออกจากตัวจัดการกลาง จึงไม่หายไปตอนซ่อนไอเท็มที่ถูกเก็บแล้ว
+หลักฐานทดสอบ: Evidence/Audio/verification.txt และ Options.png

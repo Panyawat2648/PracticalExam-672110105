@@ -13,7 +13,8 @@ public class Stage1Game:MonoBehaviour {
     Text timeText,scoreText,notice;float noticeUntil;
     Font font;Transform canvas;
     void Awake(){Remaining=seconds;Points=0;ExamScreen.Score=0;ExamScreen.LastStage="Stage1";Time.timeScale=1;}
-    void Start(){BuildHUD();Refresh();}
+    void Start(){
+        if(!player.GetComponent<ObstacleAudio>())player.gameObject.AddComponent<ObstacleAudio>();BuildHUD();Refresh();}
     void Update(){
         if(Ended)return;
         if(player.transform.position.y<fallHeight){Finish(false,"Fell from the platforms");return;}
@@ -27,6 +28,7 @@ public class Stage1Game:MonoBehaviour {
     }
     public void Apply(ItemEffect effect){
         if(Ended)return;
+        ExamAudio.Instance?.Item(effect);
         string message="";
         switch(effect){
             case ItemEffect.ScorePlus:Points+=500;message="+500 POINTS";break;

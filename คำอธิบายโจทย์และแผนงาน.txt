@@ -14,7 +14,8 @@ Unity 6000.5.8f1, Built-in Render Pipeline
 Stage 2 ใช้ Ch02 Humanoid, พื้น ProBuilder 784 ตารางเมตร, ไอเท็ม 47 ชิ้น และกด E เก็บ
 ผลทดสอบ Stage 2 อยู่ใน Evidence/Stage2/verification.txt
 โปรเจกต์เดิม D:/Unity/PracticalExam-672110105 ยังคงแยกไว้
-ระบบเสียงข้อ 9–12 และวิดีโอหลักฐานยังเป็นงานขั้นถัดไป
+ระบบเสียงข้อ 9–12 เพิ่มแล้ว: เพลงทุกฉาก, BGM/SFX แยกกันและจำค่า, เสียงไอเท็ม/ผลลบ/ชนกำแพง/ชนะ–แพ้; ดู Evidence/Audio และวิธีตรวจระบบเสียง.txt
+วิดีโอหลักฐานและการกรอกเอกสารส่งงานยังเป็นขั้นถัดไป
 
 ทรัพยากรใน ZIP และแนวทางใช้
 แตกไว้ใน Reference/PracticalExamResources เพื่อยังไม่ import ทุกไฟล์เข้า Unity

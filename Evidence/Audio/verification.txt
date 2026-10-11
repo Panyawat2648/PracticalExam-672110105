@@ -1,0 +1,75 @@
+PASS: Music starts on first scene
+PASS: Imported nonempty clip Menu
+PASS: Imported nonempty clip Stage1
+PASS: Imported nonempty clip Stage2
+PASS: Imported nonempty clip Coin
+PASS: Imported nonempty clip TimeUp
+PASS: Imported nonempty clip ScoreDown
+PASS: Imported nonempty clip TimeDown
+PASS: Imported nonempty clip Impact
+PASS: Imported nonempty clip Win
+PASS: Imported nonempty clip Lose
+PASS: One persistent audio manager in additive Options
+PASS: Exactly one playing BGM in additive Options
+PASS: One AudioListener in additive Options
+PASS: Options preserves music without restarting
+PASS: BGM slider mutes only music
+PASS: SFX slider mutes only effects
+PASS: SFX preview plays
+PASS: Volume choices saved independently
+PASS: Reopening Options restores saved setting
+PASS: One persistent audio manager in Credits
+PASS: Exactly one playing BGM in Credits
+PASS: One AudioListener in Credits
+PASS: Correct music in Credits
+PASS: Volume persists into Credits
+PASS: One persistent audio manager in StageSelection
+PASS: Exactly one playing BGM in StageSelection
+PASS: One AudioListener in StageSelection
+PASS: Correct music in StageSelection
+PASS: Volume persists into StageSelection
+PASS: One persistent audio manager in Stage1
+PASS: Exactly one playing BGM in Stage1
+PASS: One AudioListener in Stage1
+PASS: Correct music in Stage1
+PASS: Volume persists into Stage1
+PASS: One persistent audio manager in Stage2
+PASS: Exactly one playing BGM in Stage2
+PASS: One AudioListener in Stage2
+PASS: Correct music in Stage2
+PASS: Volume persists into Stage2
+PASS: One persistent audio manager in Win
+PASS: Exactly one playing BGM in Win
+PASS: One AudioListener in Win
+PASS: Correct music in Win
+PASS: Result sound in Win
+PASS: Volume persists into Win
+PASS: One persistent audio manager in GameOver
+PASS: Exactly one playing BGM in GameOver
+PASS: One AudioListener in GameOver
+PASS: Correct music in GameOver
+PASS: Result sound in GameOver
+PASS: Volume persists into GameOver
+PASS: One persistent audio manager in MainMenu
+PASS: Exactly one playing BGM in MainMenu
+PASS: One AudioListener in MainMenu
+PASS: Correct music in MainMenu
+PASS: Volume persists into MainMenu
+PASS: Stage1 trigger plays one effect for ScorePlus
+PASS: Stage1 trigger plays one effect for ScoreMinus
+PASS: Stage1 trigger plays one effect for TimePlus
+PASS: Stage1 trigger plays one effect for TimeMinus
+PASS: Stage2 proximity alone makes no pickup sound for ScorePlus
+PASS: Stage2 successful interaction plays once for ScorePlus
+PASS: Repeated Stage2 collection is silent for ScorePlus
+PASS: Stage2 proximity alone makes no pickup sound for ScoreMinus
+PASS: Stage2 successful interaction plays once for ScoreMinus
+PASS: Repeated Stage2 collection is silent for ScoreMinus
+PASS: Stage2 proximity alone makes no pickup sound for TimePlus
+PASS: Stage2 successful interaction plays once for TimePlus
+PASS: Repeated Stage2 collection is silent for TimePlus
+PASS: Stage2 proximity alone makes no pickup sound for TimeMinus
+PASS: Stage2 successful interaction plays once for TimeMinus
+PASS: Repeated Stage2 collection is silent for TimeMinus
+PASS: CharacterController wall collision plays impact sound
+PASS: Wall sound cooldown prevents per-frame spam
