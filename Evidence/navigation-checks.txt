@@ -46,11 +46,9 @@ PASS: Stage2 / Back enabled
 PASS: Exactly one EventSystem in StageSelection
 PASS: StageSelection / Stage 2 - Humanoid Player enabled
 PASS: Exactly one EventSystem in Stage2
-PASS: Stage2 / Lose (test) enabled
 PASS: Exactly one EventSystem in GameOver
 PASS: GameOver / Try Again enabled
 PASS: Exactly one EventSystem in Stage2
-PASS: Stage2 / Win (test) enabled
 PASS: Exactly one EventSystem in Win
 PASS: Win / Back To Main Menu enabled
 PASS: Exactly one EventSystem in MainMenu
@@ -58,7 +56,6 @@ PASS: MainMenu / Start enabled
 PASS: Exactly one EventSystem in StageSelection
 PASS: StageSelection / Stage 2 - Humanoid Player enabled
 PASS: Exactly one EventSystem in Stage2
-PASS: Stage2 / Lose (test) enabled
 PASS: Exactly one EventSystem in GameOver
 PASS: GameOver / Back To Main Menu enabled
 PASS: Exactly one EventSystem in MainMenu

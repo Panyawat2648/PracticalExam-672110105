@@ -46,7 +46,7 @@ public class Stage1Game:MonoBehaviour {
     void Refresh(){
         if(timeText)timeText.text="TIME  "+Remaining.ToString("0.0")+" s";
         if(scoreText)scoreText.text="SCORE  "+Points+"   /   > 10,000";
-        if(timeText)timeText.color=Remaining<=10?new Color(1,.42f,.35f):Color.white;
+        if(timeText)timeText.color=Remaining<=10?new Color(.72f,.12f,.16f):new Color(.10f,.18f,.28f);
     }
     void BuildHUD(){
         font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
@@ -55,27 +55,28 @@ public class Stage1Game:MonoBehaviour {
         canvas=go.transform;go.GetComponent<Canvas>().renderMode=RenderMode.ScreenSpaceOverlay;
         var scaler=go.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1280,720);scaler.matchWidthOrHeight=.5f;
         var top=Rect("Top",canvas,new Vector2(.5f,1),new Vector2(0,-58),new Vector2(1280,116));
-        top.gameObject.AddComponent<Image>().color=new Color(.025f,.045f,.075f,.95f);
+        top.gameObject.AddComponent<Image>().color=new Color(.95f,.97f,1f,.98f);
         timeText=Label(top,"",new Vector2(-490,12),new Vector2(260,45),30);
         scoreText=Label(top,"",new Vector2(-60,12),new Vector2(560,45),26);
         Label(top,"STAGE 1 / SKY CIRCUIT",new Vector2(-420,-32),new Vector2(400,28),18);
         var back=Rect("Back",top,new Vector2(.5f,.5f),new Vector2(520,5),new Vector2(180,42));
-        back.gameObject.AddComponent<Image>().color=new Color(.12f,.28f,.34f);
+        back.gameObject.AddComponent<Image>().color=new Color(.70f,.86f,.97f);
         back.gameObject.AddComponent<Button>().onClick.AddListener(()=>ExamScreen.Go("StageSelection"));
         Label(back,"Back",Vector2.zero,new Vector2(170,36),22);
         var bottom=Rect("Help",canvas,new Vector2(.5f,0),new Vector2(0,51),new Vector2(1280,102));
-        bottom.gameObject.AddComponent<Image>().color=new Color(.025f,.045f,.075f,.94f);
+        bottom.gameObject.AddComponent<Image>().color=new Color(.95f,.97f,1f,.98f);
         Label(bottom,"W/S move   A/D turn   Shift sprint   Space jump",new Vector2(0,25),new Vector2(1200,28),19);
         Label(bottom,"GOLD +500     GREEN +3s     RED -500     PURPLE -5s",Vector2.zero,new Vector2(1200,28),19);
         Label(bottom,"Win when time ends with score > 10,000. Falling ends the run.",new Vector2(0,-28),new Vector2(1200,28),17);
         notice=Label(canvas,"",new Vector2(0,180),new Vector2(800,45),30);
+        notice.color=Color.white; notice.gameObject.AddComponent<Shadow>().effectColor=new Color(0,0,0,.8f);
     }
     RectTransform Rect(string name,Transform parent,Vector2 anchor,Vector2 pos,Vector2 size){
         var r=new GameObject(name,typeof(RectTransform)).GetComponent<RectTransform>();r.SetParent(parent,false);r.anchorMin=r.anchorMax=anchor;r.anchoredPosition=pos;r.sizeDelta=size;return r;
     }
     Text Label(Transform parent,string value,Vector2 position,Vector2 size,int fontSize){
         var text=Rect("Label",parent,new Vector2(.5f,.5f),position,size).gameObject.AddComponent<Text>();
-        text.font=font;text.text=value;text.fontSize=fontSize;text.alignment=TextAnchor.MiddleCenter;text.color=Color.white;text.raycastTarget=false;return text;
+        text.font=font;text.text=value;text.fontSize=fontSize;text.alignment=TextAnchor.MiddleCenter;text.color=new Color(.10f,.18f,.28f);text.raycastTarget=false;return text;
     }
 }
 }

@@ -1,0 +1,1 @@
+Stage2: 28x28m = 784m2; 14 ProBuilder meshes; 47 interaction items; Ch02 valid Humanoid; original StarterAssets.ThirdPersonController + Cinemachine 2.10.7 + Input System; 30s strict >10000 win at expiry.

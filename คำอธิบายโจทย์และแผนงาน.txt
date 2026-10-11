@@ -3,15 +3,18 @@
 อ่านจาก 169-PracticalExam.pdf (9 หน้า), ตรวจรายการไฟล์ใน PracticalExamResources.zip
 ช่วงสอบที่ระบุ: 8–13 ตุลาคม 2026 | 12 เกณฑ์ | 75 คะแนน | 15% ของรายวิชา
 
-สถานะโปรเจกต์
-D:/Unity/PracticalExam-672110105
+สถานะโปรเจกต์ (อัปเดต 11 ตุลาคม 2026)
+D:/Unity/PracticalExam-672110105-v3 — branch version-3 แยกจาก version-2
 Unity 6000.5.8f1, Built-in Render Pipeline
-ติดตั้ง ProBuilder 6.1.2 และ Standard Assets 2018 จากชุดที่นำเข้าไว้ในโปรเจกต์เดิม
-Standard Assets มีการแก้ความเข้ากันได้กับ Unity 6 อยู่แล้ว เช่น GUIText และ GetInstanceID
-ผลการตรวจติดตั้งดู setup-verification.txt; การตรวจ Prefab ไม่เท่ากับทดสอบเดินในฉาก
-ฉากหลัก Assets/Scenes/Empty.unity มีเพียงกล้องกับแสง ยังไม่มีเกมหรือด่าน
-Standard Assets 2018 ไม่ใช่ Starter Assets Third Person ที่โจทย์ Stage 2 ระบุ ต้องเพิ่มชุดที่ถูกต้องก่อนทำด่าน 2 และตรวจความเข้ากันได้ของ render pipeline/Input System/Cinemachine ตามรุ่นที่เลือก
-ยังไม่ได้สร้าง repository ออนไลน์ commit หรือ push
+ติดตั้ง ProBuilder 6.1.2, Input System 1.20.0, Cinemachine 2.10.7
+มี Standard Assets 2018 จากงานก่อน และเพิ่ม Starter Assets Third Person สำหรับ Stage 2
+รายละเอียดแหล่งที่มาของ Starter Assets อยู่ใน StarterAssets-source.txt
+เมนูและ Stage 1 อยู่ใน version-2 ที่ push แล้ว; version-3 เพิ่ม Stage 2 และ UI โทนสว่าง
+เปิด Assets/Exam/Scenes/MainMenu.unity เพื่อเริ่มเล่นทั้งสองด่าน
+Stage 2 ใช้ Ch02 Humanoid, พื้น ProBuilder 784 ตารางเมตร, ไอเท็ม 47 ชิ้น และกด E เก็บ
+ผลทดสอบ Stage 2 อยู่ใน Evidence/Stage2/verification.txt
+โปรเจกต์เดิม D:/Unity/PracticalExam-672110105 ยังคงแยกไว้
+ระบบเสียงข้อ 9–12 และวิดีโอหลักฐานยังเป็นงานขั้นถัดไป
 
 ทรัพยากรใน ZIP และแนวทางใช้
 แตกไว้ใน Reference/PracticalExamResources เพื่อยังไม่ import ทุกไฟล์เข้า Unity

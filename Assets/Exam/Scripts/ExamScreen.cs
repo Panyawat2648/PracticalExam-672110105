@@ -30,11 +30,11 @@ namespace PanyawatHainak
             var scaler=go.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1280,720);scaler.matchWidthOrHeight=.5f;
             var bg=Rect("Background",go.transform,Vector2.zero,new Vector2(1280,720));
             bg.anchorMin=Vector2.zero;bg.anchorMax=Vector2.one;bg.sizeDelta=Vector2.zero;
-            bg.gameObject.AddComponent<Image>().color=modal?new Color(0,0,0,.85f):new Color(.035f,.055f,.085f);
+            bg.gameObject.AddComponent<Image>().color=modal?new Color(.90f,.95f,.99f,.98f):new Color(.95f,.97f,1f);
             panel=Rect("Panel",bg,Vector2.zero,new Vector2(700,600));
-            Label("PRACTICAL EXAM / SCENE MANAGEMENT",255,18,new Color(.4f,.85f,.8f));
-            Label(Title(),195,36,Color.white);
-            Label("672110105  panyawat hainak",-265,18,new Color(.7f,.75f,.8f));
+            Label("PRACTICAL EXAM / SCENE MANAGEMENT",255,18,new Color(.12f,.38f,.55f));
+            Label(Title(),195,36,new Color(.10f,.18f,.28f));
+            Label("672110105  panyawat hainak",-265,18,new Color(.32f,.40f,.49f));
             switch(screen) {
                 case "MainMenu":
                     Button("Start",95,()=>Go("StageSelection"));
@@ -48,24 +48,24 @@ namespace PanyawatHainak
                     Button("Back",-115,()=>Go("MainMenu")); break;
                 case "Stage1": case "Stage2":
                     LastStage=screen;
-                    Label("Scene navigation preview",120,20,Color.white);
-                    Label("Gameplay will be added in the next tasks.",85,18,new Color(.7f,.75f,.8f));
+                    Label("Scene navigation preview",120,20,new Color(.10f,.18f,.28f));
+                    Label("Gameplay will be added in the next tasks.",85,18,new Color(.32f,.40f,.49f));
                     Button("Win (test)",15,()=>Go("Win"));
                     Button("Lose (test)",-45,()=>Go("GameOver"));
                     Button("Back",-125,()=>Go("StageSelection"));break;
                 case "Win": case "GameOver":
-                    Label("Score: "+Score,95,26,Color.white);
-                    Label(ResultReason,55,17,Color.white);
+                    Label("Score: "+Score,95,26,new Color(.10f,.18f,.28f));
+                    Label(ResultReason,55,17,new Color(.10f,.18f,.28f));
                     if(screen=="GameOver") Button("Try Again",15,()=>Stage(LastStage));
                     Button("Back To Main Menu",-100,()=>Go("MainMenu"));break;
                 case "Credits":
-                    Label("Created by",70,22,Color.white);
-                    Label("panyawat hainak",25,30,Color.white);
-                    Label("Student Code: 672110105",-20,22,Color.white);
+                    Label("Created by",70,22,new Color(.10f,.18f,.28f));
+                    Label("panyawat hainak",25,30,new Color(.10f,.18f,.28f));
+                    Label("Student Code: 672110105",-20,22,new Color(.10f,.18f,.28f));
                     Button("Back",-125,()=>Go("MainMenu"));break;
                 case "Options":
-                    Label("BGM and SFX controls will be added in the audio task.",65,18,Color.white);
-                    Label("This page currently demonstrates additive scene loading.",15,18,new Color(.7f,.75f,.8f));
+                    Label("BGM and SFX controls will be added in the audio task.",65,18,new Color(.10f,.18f,.28f));
+                    Label("This page currently demonstrates additive scene loading.",15,18,new Color(.32f,.40f,.49f));
                     Button("OK",-115,CloseOptions);break;
             }
         }
@@ -105,10 +105,10 @@ namespace PanyawatHainak
         }
         void Button(string text,float y,UnityEngine.Events.UnityAction action) {
             var r=Rect(text,panel,new Vector2(0,y),new Vector2(430,48));
-            var im=r.gameObject.AddComponent<Image>();im.color=new Color(.08f,.3f,.35f);
+            var im=r.gameObject.AddComponent<Image>();im.color=new Color(.70f,.86f,.97f);
             var b=r.gameObject.AddComponent<Button>();b.targetGraphic=im;b.onClick.AddListener(action);
             var t=Rect("Label",r,Vector2.zero,new Vector2(410,45)).gameObject.AddComponent<Text>();
-            t.font=font;t.text=text;t.fontSize=22;t.alignment=TextAnchor.MiddleCenter;t.color=Color.white;t.raycastTarget=false;
+            t.font=font;t.text=text;t.fontSize=22;t.alignment=TextAnchor.MiddleCenter;t.color=new Color(.10f,.18f,.28f);t.raycastTarget=false;
         }
     }
 }

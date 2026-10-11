@@ -1,0 +1,42 @@
+PASS: 30-second countdown starts
+PASS: Ch02 uses valid Humanoid Avatar
+PASS: Original Starter Assets controller with PlayerInput and CharacterController
+PASS: Cinemachine controls third-person camera
+PASS: ProBuilder garden meshes present
+PASS: Floor at least 784 square metres
+PASS: All 47 interaction item instances
+PASS: W moves Humanoid through Starter Assets: (-11.00, 0.06, -9.39) input=(0.00, 1.00) key=True scheme=KeyboardMouse
+PASS: Locomotion blend and leg animation: speed=2.996473 leg angle=46.03512
+PASS: Space jumps with Humanoid animation
+PASS: Humanoid lands
+PASS: Wall blocks interaction line of sight
+PASS: E out of range has no effect
+PASS: Walking into ScorePlus does not auto-collect
+PASS: Nearest item selected for ScorePlus
+PASS: E collects ScorePlus once
+PASS: Exact score/time effect for ScorePlus
+PASS: Cannot collect ScorePlus twice
+PASS: Walking into ScoreMinus does not auto-collect
+PASS: Nearest item selected for ScoreMinus
+PASS: E collects ScoreMinus once
+PASS: Exact score/time effect for ScoreMinus
+PASS: Cannot collect ScoreMinus twice
+PASS: Walking into TimePlus does not auto-collect
+PASS: Nearest item selected for TimePlus
+PASS: E collects TimePlus once
+PASS: Exact score/time effect for TimePlus
+PASS: Cannot collect TimePlus twice
+PASS: Walking into TimeMinus does not auto-collect
+PASS: Nearest item selected for TimeMinus
+PASS: E collects TimeMinus once
+PASS: Exact score/time effect for TimeMinus
+PASS: Cannot collect TimeMinus twice
+PASS: Real input route collects enough points before timeout: 18000
+PASS: Reaching target does not auto-win early
+PASS: Timeout above target shows Win and score
+PASS: Low-score timeout loses
+PASS: Retry returns to Stage2 and restores all items/time/score
+PASS: Exactly 10000 loses under strict greater-than rule
+PASS: Falling outside garden loses
+PASS: Time penalty reaching zero immediately resolves game
+PASS: Back returns to stage selection

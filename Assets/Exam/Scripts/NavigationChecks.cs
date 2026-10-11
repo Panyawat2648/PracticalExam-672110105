@@ -58,13 +58,13 @@ public class NavigationChecks:MonoBehaviour {
             Click("StageSelection",label);yield return WaitScene(stage);
             Click(stage,"Back");yield return WaitScene("StageSelection");
             Click("StageSelection",label);yield return WaitScene(stage);
-            if(stage=="Stage1") FindAnyObjectByType<Stage1Game>().Advance(60); else Click(stage,"Lose (test)");yield return WaitScene("GameOver");
+            if(stage=="Stage1") FindAnyObjectByType<Stage1Game>().Advance(60); else FindAnyObjectByType<Stage2Game>().Advance(60);yield return WaitScene("GameOver");
             Click("GameOver","Try Again");yield return WaitScene(stage);
-            if(stage=="Stage1") { var game=FindAnyObjectByType<Stage1Game>(); for(int i=0;i<21;i++) game.Apply(ItemEffect.ScorePlus); game.Advance(60); } else Click(stage,"Win (test)");yield return WaitScene("Win");
+            if(stage=="Stage1") { var game=FindAnyObjectByType<Stage1Game>(); for(int i=0;i<21;i++) game.Apply(ItemEffect.ScorePlus); game.Advance(60); } else { var game=FindAnyObjectByType<Stage2Game>(); for(int i=0;i<21;i++) game.Apply(ItemEffect.ScorePlus); game.Advance(60); };yield return WaitScene("Win");
             Click("Win","Back To Main Menu");yield return WaitScene("MainMenu");
             Click("MainMenu","Start");yield return WaitScene("StageSelection");
             Click("StageSelection",label);yield return WaitScene(stage);
-            if(stage=="Stage1") FindAnyObjectByType<Stage1Game>().Advance(60); else Click(stage,"Lose (test)");yield return WaitScene("GameOver");
+            if(stage=="Stage1") FindAnyObjectByType<Stage1Game>().Advance(60); else FindAnyObjectByType<Stage2Game>().Advance(60);yield return WaitScene("GameOver");
             Click("GameOver","Back To Main Menu");yield return WaitScene("MainMenu");
         }
         var canvas=UnityEngine.Object.FindAnyObjectByType<Canvas>();

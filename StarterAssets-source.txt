@@ -1,0 +1,6 @@
+Starter Assets source subset from nrsharip/unity-third-person
+Pinned commit: e40c16b4ee994067ea61999e124a287e0f729248
+Original Unity Companion License retained in Assets/StarterAssets/license.txt
+Imported controller, Input System bindings, humanoid locomotion clips/models. No demo scene, textures, or editor DLL imported.
+Local compatibility adjustments: null-check optional footstep/landing audio; compilation symbol provided via Assets/csc.rsp after installing Input System and Cinemachine. Vendor namespace StarterAssets retained; exam code uses PanyawatHainak.
+Input-action cleanup: removed empty Xbox/PS4 schemes from example source and required an actual Gamepad for the Gamepad scheme, preventing keyboard fallback to a scheme with no bindings.
